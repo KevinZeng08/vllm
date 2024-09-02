@@ -124,6 +124,7 @@ class ChatCompletionRequest(OpenAIBaseModel):
     top_logprobs: Optional[int] = 0
     max_tokens: Optional[int] = None
     n: Optional[int] = 1
+    parallel_tool_calls: Optional[bool] = True
     presence_penalty: Optional[float] = 0.0
     response_format: Optional[ResponseFormat] = None
     seed: Optional[int] = Field(None, ge=_LONG_INFO.min, le=_LONG_INFO.max)
