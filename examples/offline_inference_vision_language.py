@@ -30,7 +30,7 @@ def run_llava(question):
 def run_llava_next(question):
 
     prompt = f"[INST] <image>\n{question} [/INST]"
-    llm = LLM(model="llava-hf/llava-v1.6-mistral-7b-hf")
+    llm = LLM(model="/home/zbw/model_zoo/llava-hf/llava-v1.6-mistral-7b-hf", max_model_len = 12800)
     stop_token_ids = None
     return llm, prompt, stop_token_ids
 
